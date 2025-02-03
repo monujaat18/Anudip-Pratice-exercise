@@ -1,16 +1,34 @@
-public class JavaBasics{
-public static void main(String args[]){
- int a = 100;
- int b = 20;
-float marks = 430; 
-int radius = 5; 
-float pi = 3.14f;
-float area = (pi*(radius*radius));
-System.out.println("Sum : "+ (a+b)); 
-System.out.println("Subtraction : "+ (a-b)); 
-System.out.println("Multiply : "+ (a*b)); 
-System.out.println("Divide : "+ (a/b)); 
-System.out.println("Avarage of the total marks is "+ ((marks/500f)*100)); 
-System.out.println("Area of a circle of 5 is : "+ area);
-}
+import java.util.*;
+
+public class JavaBasics {
+ public static void evOdd(int number){
+  if (number % 2 == 0) {
+    System.out.println("Even");
+  } else {
+    System.out.println("Odd");
+  }
+ }
+ public static void lorUper(char ch){
+  if (ch >= 'a' && ch <= 'z') {
+    System.out.println("Lowercase");
+  } else {
+    System.out.println("Uppercase");
+  }
+ }
+ public static void idPas(int number , char ch){
+  if (number == 1234 && ch == 'A') {
+    System.out.println("Correct");
+  } else {
+    System.out.println("Incorrect");
+  }
+ }
+  public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  int number = scanner.nextInt();
+  char ch = scanner.next().charAt(0);
+  evOdd(number);
+  lorUper(ch);
+  idPas(number, ch);
+  scanner.close();
+  }
 }
